@@ -1,39 +1,41 @@
-2) Instructor Answer Keys (What “Good” Looks Like)
+3) Student Submission Checklist (One Page)
 
-You don’t need line-by-line keys; you need architecture + behavior.
+Pleasee Remember to attach one generic checklist  to each submission:
 
-Lab 1 – Event-Driven Image Processor
+✅ Student Submission Checklist
+
 Architecture:
-S3 ObjectCreated:* → Lambda (metadata + EventBridge)
-EventBridge routes a “IMAGE_PROCESSED” event to a logging Lambda
-Logging Lambda writes to Aurora (image key, size, user, timestamp)
-SNS sends user/admin success notification
-Key correctness signals:
-Lambda idempotent (can process same S3 event twice without duplicate DB entries)
-Aurora writes use parameterized queries or Data API
-SNS topic subscription works (test via email)
-Lab 2 – Serverless Order System
-Architecture:
-API Gateway REST/HTTP → Lambda (validation, enrichment) → SQS
-Worker Lambda pulls from SQS, writes to Aurora orders table
-Key correctness signals:
-Orders with invalid fields are rejected at API layer
-SQS DLQ configured and demonstrably catches poison messages
-Aurora schema supports indexing by order_id / customer_id
-Lab 3 – Real-Time Inventory
-S3 CSV → Lambda → Aurora update → SNS notify
-Correct CSV parsing, graceful handling of bad lines, transactional upserts.
-Lab 4 – Event Stream Router
-3+ EventBridge rules with different patterns (e.g. source/type/region)
-Each pattern routes to different Lambda/SQS/SNS targets
-DLQ configured at bus or target level
-Lab 5 – Aurora AI Query Bot
-API → Lambda → Bedrock (or GPT) → safe SQL → Aurora
-SQL constrained to a limited set of templates (no arbitrary SQL)
-Queries logged (for auditing)
-Labs 6–10 follow same style: you just check that:
-Required services are present
-Error paths are handled
-Scaling/throughput or failover behavior is demonstrated (for 9 & 10)
 
-You can paste the above into an “Instructor Key” section and expand per lab when grading.
+ All required services used: Lambda, EventBridge, Aurora, SNS/SQS (as specified in lab).
+ Terraform can terraform apply without manual console changes.
+ AWS resources are named with app + env (e.g., lab2-orders-dev).
+
+Lambda:
+
+ Lambda code is in version control (Git repo link submitted).
+ Environment variables configured via Terraform (no secrets hard-coded).
+ Lambda handlers are idempotent (safe to re-run events).
+
+Aurora:
+
+ Aurora cluster deployed via Terraform (no manual RDS wizard).
+ Schema created via script or migration file (SQL file included).
+ Connections closed properly (no runaway connection leak).
+
+Messaging:
+
+ SQS queues have DLQs configured where appropriate.
+ SNS topics have at least one functional subscription tested.
+ EventBridge rules have event patterns documented in README.
+
+Testing:
+
+ At least 5 test events executed per lab.
+ Screenshots or logs included showing end-to-end flow.
+ Failure path tested (bad messages, invalid input).
+
+Docs:
+
+ README.md explains architecture and how to run tests.
+ Simple text diagram included.
+ Known limitations listed.
