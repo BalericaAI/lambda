@@ -76,7 +76,7 @@ Runtime:  Node.js (latest LTS)
 Permissions: Create new role (basic Lambda)
 
 ✍️ Task 6 — Add Node.js Code 
-Use this code: https://github.com/BalericaAI/lambda/blob/main/lessonb/lambda/Node.js
+Use this code: https://github.com/BalericaAI/lambda/blob/main/lessonb/lambda/chewbacca-node-lambda.js
 
 💾 Click Deploy
 
