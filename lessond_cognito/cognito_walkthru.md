@@ -83,6 +83,7 @@ Inside User Pool:
         Click Create user
 
 Fill:
+
         Username: lizzo1
         Email: student1@lizzo.com
         Phone: +1XXXXXXXXXX
