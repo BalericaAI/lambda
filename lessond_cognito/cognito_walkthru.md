@@ -186,7 +186,7 @@ Task 9 — Verify Behavior
 
 Final Explanation
 
-What Cognito does?
-What API Gateway does?
-What MFA adds?
-Why AccessToken matters?
+    What Cognito does?
+    What API Gateway does?
+    What MFA adds?
+    Why AccessToken matters?
