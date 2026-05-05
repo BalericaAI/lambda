@@ -27,3 +27,31 @@ Task 1 — Create Cognito User Pool
 
 Step-by-Step Configuration
 
+
+1. Sign-in Options
+
+Select: “We allow multiple identity inputs. Real systems don’t force one.”
+
+        ✔ Username
+        ✔ Email
+        ✔ Phone number
+
+2. Password Policy
+
+Keep default or slightly stronger:
+
+        Min 8 characters
+        Numbers + symbols
+
+3. MFA Configuration---> “MFA is not optional in real systems.”
+
+Set: Required MFA
+
+        MFA Types:
+        ✔ SMS
+        ✔ TOTP (Authenticator app)
+
+
+
+
+
