@@ -168,3 +168,17 @@ With Token -->  curl https://<api>/prod/python \
   -H "Authorization: <ACCESS_TOKEN>" 
 
 → 200 OK
+
+
+Task 9 — Verify Behavior
+
+1. Did Lambda run when no token?
+2. Where was request blocked?
+3. What changed in event?
+
+Final Explanation
+
+What Cognito does?
+What API Gateway does?
+What MFA adds?
+Why AccessToken matters?
