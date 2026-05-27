@@ -99,7 +99,7 @@ Examples:
 | Role         | Group membership | Group membership    |
 | Token Claims | JWT              | SAML / OAuth claims |
 
-Say this: “Cognito groups = AD security groups. Same idea, different platform.”
+Remember this: “Cognito groups = AD security groups. Same idea, different platform.”
 
 Mental Model (Important)
 
