@@ -23,6 +23,7 @@ No DynamoDB yet. No EventBridge yet. First, prove Bedrock can analyze the WAF ev
 Required IAM permissions
 
 The Lambda execution role needs:
+https://github.com/BalericaAI/lambda/blob/main/lessonh_WAF/IAM/waf_role.md
 
         {
           "Version": "2012-10-17",
