@@ -22,25 +22,25 @@ Required IAM permissions
 
 The Lambda execution role needs:
 
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "logs:FilterLogEvents"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModel"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "logs:FilterLogEvents"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "bedrock:InvokeModel"
+              ],
+              "Resource": "*"
+            }
+          ]
+        }
 
 
 Lambda environment variables
@@ -53,5 +53,7 @@ LOOKBACK_MINUTES=10
 
 Make this: Python Lambda: waf_bedrock_analyzer.py
 
+
+https://github.com/BalericaAI/lambda/blob/main/lessonh_WAF/python/waf_bedrock_analyzer.py
 
 
