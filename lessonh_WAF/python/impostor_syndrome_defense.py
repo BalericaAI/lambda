@@ -1,4 +1,5 @@
 # impostor_syndrome_defense.py
+# python3 impostor_syndrome_defense.py
 
 import random
 import time
